@@ -16,10 +16,11 @@
 <body>
 <!--Title of app-->
 <header>
-    <h1>Remind Me Later</h1>
+    <h1 id="mainTitle">Add New Task</h1>
 </header>
 
 <form id="taskForm" action="#" method="post">
+<div id="allForm">
 	<fieldset class="set">
 		<legend class="field">What's the Task?</legend>
 			<!--Info in the fieldset-->
@@ -60,16 +61,22 @@
 		<li><textarea class="noteNow" id="notes"></textarea></li>
 		<li><input type="hidden" value="true" /></li>
 	</ul>
-
+</div>
 </form>
 
-<button id="submit">Save Task</button>
 
 <!--Add New Task Button-->
-<a href="additem.html" id="addAnother"><button id="addOne" style="display: none;">Add New Task</button></a><br />
+
 
 <footer>
-<a href= "#" id="clear">Clear Stored Data</a> <a href= "#" id="displayData">Display Data</a>
+	<div id="mainMenu">
+		<center><a href="additem.html" id="addAnother"><button id="addOne" style="display: none;">Add New Task</button></a>
+		<button id="submit">Save Task</button>
+		<a href= "#" id="clear"><button id="secButton">Clear Stored Data</button></a>
+		<a href= "#" id="displayData"><button id="secButton">Display Data</button></a>
+		<a href= "index.html"><button id="secButton">Home</button></a>
+		<a href= "help.html"><button id="secButton">Help</button></a>
+	<div>
 </footer>
 
 <script type="text/javascript" src="js/json.js"></script>
