@@ -1,11 +1,12 @@
 //Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 
+
 	//getElementById function
 	var elId = function (n) {
 		var theElement = document.getElementById(n);
 		return theElement;
-	}
+	};
 	
 
 	//Create select field element and populate with options.
@@ -39,10 +40,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	var toggleContr = function (n) {
 		switch(n) {
 			case "on":
-				elId("displayData2").style.display = "none";
+				elId("displayData3").style.display = "none";
 				break;
 			case "off":
-				elId("displayData2").style.display = "inline";
+				elId("displayData3").style.display = "inline";
 				elId("items").style.display = "none";
 				
 				break;
@@ -79,7 +80,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement("ul");
 		makeList.setAttribute("id", "wholeList");
 		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
+		var container = document.getElementById ("lookNow2");
+		container.appendChild(makeDiv);
 		elId("items").style = "block"
 		for(var i=0, len=localStorage.length; i<len; i++) {
 			var makeLi = document.createElement("li");
@@ -125,21 +127,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Make edit and delete buttons for each stored item
 	var makeItemLinks = function (key, linksLi) {
-		//add edit single item link
-		var edit = document.createElement('a');
-		edit.href = "#";
-		edit.key = key;
-		var editTxt = "Edit task";
-		edit.addEventListener("click", editItem);
-		edit.innerHTML= editTxt;
-		linksLi.appendChild(edit);
-		
-		//add line break
-		var breakIt = document.createElement("br");
-		linksLi.appendChild(breakIt);
 		
 		//add delete single link
-		var deleteIt = document.createElement('a');
+		var deleteIt = document.createElement('button','a');
 		deleteIt.href = "#";
 		deleteIt.key = key;
 		var deleteTxt = "Delete Task";
@@ -189,8 +179,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 		
 	//Set Link & Submit Click Events
-	var displayLink2 = elId("displayData2");
-	displayLink2.addEventListener("click", getData);
+	var displayLink3 = elId("displayData3");
+	displayLink3.addEventListener("click", getData);
 	
 	var deleteItem = function () {
 		var ask = confirm("Are you sure you want to delete this task?");
