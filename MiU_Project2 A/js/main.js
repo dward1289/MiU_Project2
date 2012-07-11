@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", function(){
 $('#mainMenu1').children().children().css('font-size','10px');
 $('#mainMenu2').children().children().css('font-size','10px');
 $('#mainMenu3').children().children().css('font-size','10px');
+$('items').css('listview');
 
 	//getElementById function
 	var elId = function (n) {
