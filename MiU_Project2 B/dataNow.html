@@ -19,51 +19,24 @@
 	<link rel="stylesheet" href="css/style.css" />
 	
 	
-	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 	
 </head>
 <body>
 
-	<div data-role="page" id="home">
+	<div data-role="page" id="about">
 		<div data-role="header" data-position="fixed">
 			<!--Title-->
-			<h1>Remind Me Later</h1>
+			<h1>Display Data</h1>
 		</div>
 		
 		<div data-role="content">
 			<!--Content Goes Here-->
-			<img src="http://i24.photobucket.com/albums/c39/youngbutcute07/feature-1.png" alt="Feature" width= "285px" id="feature"/>
-			
-			<ul data-role="listview" data-inset="true" data-filter="true">
-				<li id="mainMenu1"><a href="#about" data-role="button">About</a></li>
-				<li id="mainMenu2"><a href="additem.html" data-role="button">Add New Task</a></li>
-				<li id="mainMenu3"><a href="contact.html" data-role="button">Contact</a></li>
-				<li id="mainMenu4"><a href="help.html" data-role="button">Help</a></li>
-				<li><div data-role="collapsible" data-iconpos="right"><h3><a href="#" data-role="button" id="displayData2">Display Saved Tasks</a></h3><p><div id="lookNow"></div></p></div></li>
-			</ul>		
-		</div>
-	
-		<div data-role="footer" data-position="fixed">
-			<!--Footer-->
-			<h1>MadGeek(2012) 1.0.2</h1>
-			</div><!--footer end-->
-	</div>
-	
-	<!--New Page-->
-		<div data-role="page" id="about">
-		<div data-role="header" data-position="fixed">
-			<!--Title-->
-			<h1>About</h1>
-		</div>
+			<center><p>To view saved tasks, click the button below.</p></center>
+<a href="#" data-role="button" id="displayData2">Display Saved Tasks</a>
+<div id="lookNow"></div>
 		
-		<div data-role="content">
-			<!--Content Goes Here-->
-			<p id="subTitle">Name: Remind Me Later</p>
-			<p id="subTitle">Version: 1.0.2</p>
-			<p id="subTitle">New Features Added: Easier navigation, and better layout since version 1.0.1</p>
-			<p id="subTitle">Creator: Devona Ward</p		
 		</div>
 	
 		<div data-role="footer" data-position="fixed">
@@ -81,7 +54,6 @@
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script src="js/main.js"></script>
-	
 
 </body>
 </html>

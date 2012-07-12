@@ -12,6 +12,41 @@ ul{
 	height:50px;
 }
 
+#mainMenu1{
+font-size:10px;
+}
+
+#mainMenu2{
+font-size:10px;
+}
+
+#mainMenu3{
+font-size:10px;
+}
+
+#mainMenu4{
+font-size:10px;
+}
+
+#displayData2{
+font-size:10px;
+}
+
+/*Display Task list*/
+#listing{
+	font-family:Tahoma, Geneva, sans-serif;
+	border-style:ridge;
+	margin-left: 10px;
+	background: #696969;
+	}	
+
+/*Display Task list images*/
+img{
+	margin-top: 10px;
+	margin-left: 15px;
+		}
+
+
 
 
 

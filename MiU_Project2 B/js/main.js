@@ -1,10 +1,6 @@
 //Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 
-$('#mainMenu1').children().children().css('font-size','10px');
-$('#mainMenu2').children().children().css('font-size','10px');
-$('#mainMenu3').children().children().css('font-size','10px');
-
 	//getElementById function
 	var elId = function (n) {
 		var theElement = document.getElementById(n);
@@ -104,7 +100,7 @@ $('#mainMenu3').children().children().css('font-size','10px');
 		var makeList = document.createElement("ul");
 		makeList.setAttribute("id", "wholeList");
 		makeDiv.appendChild(makeList);
-		 var container = document.getElementById ("seeHere");
+		var container = document.getElementById ("seeHere");
 		container.appendChild(makeDiv);
 		elId("items").style = "block"
 		for(var i=0, len=localStorage.length; i<len; i++) {
@@ -119,6 +115,7 @@ $('#mainMenu3').children().children().css('font-size','10px');
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeLi.appendChild(makeSubList);
+			getImage(obj.priorityLevel[1], makeSubList);
 			for(var r in obj) {
 				var makeSubLi = document.createElement("li");
 				makeSubList.appendChild(makeSubLi);
@@ -153,7 +150,7 @@ $('#mainMenu3').children().children().css('font-size','10px');
 	//Make edit and delete buttons for each stored item
 	var makeItemLinks = function (key, linksLi) {
 		//add edit single item link
-		var edit = document.createElement('button','a');
+		var edit = document.createElement('a');
 		edit.href = "#";
 		edit.key = key;
 		var editTxt = "Edit task";
@@ -161,8 +158,12 @@ $('#mainMenu3').children().children().css('font-size','10px');
 		edit.innerHTML= editTxt;
 		linksLi.appendChild(edit);
 		
+		//add line break
+		var breakIt = document.createElement("br");
+		linksLi.appendChild(breakIt);
+		
 		//add delete single link
-		var deleteIt = document.createElement('button','a');
+		var deleteIt = document.createElement('a');
 		deleteIt.href = "#";
 		deleteIt.key = key;
 		var deleteTxt = "Delete Task";
