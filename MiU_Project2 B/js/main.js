@@ -1,6 +1,12 @@
 //Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 
+$('#mainMenu1').children().children().css('font-size','10px');
+$('#mainMenu2').children().children().css('font-size','10px');
+$('#mainMenu3').children().children().css('font-size','10px');
+$('#mainMenu4').children().children().css('font-size','10px');
+$('#displayData2').children().children().css('font-size','10px');
+
 	//getElementById function
 	var elId = function (n) {
 		var theElement = document.getElementById(n);
@@ -100,8 +106,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement("ul");
 		makeList.setAttribute("id", "wholeList");
 		makeDiv.appendChild(makeList);
-		var container = document.getElementById ("seeHere");
-		container.appendChild(makeDiv);
+		document.body.appendChild(makeDiv);
 		elId("items").style = "block"
 		for(var i=0, len=localStorage.length; i<len; i++) {
 			var makeLi = document.createElement("li");
